@@ -76,6 +76,13 @@ dragDest.forEach(function(i){
 });
 
 //Load
+let images = document.querySelectorAll('img');
+console.log(images);
+images.forEach(function(i) {
+    i.addEventListener('load', function(e) {
+        console.log(`${i.alt} loaded`);
+    });
+});
 
 //Focus
 
