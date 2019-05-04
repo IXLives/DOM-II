@@ -85,7 +85,6 @@ images.forEach(function(i) {
 });
 
 //Focus
-
 navBar.forEach(function(i) {
     i.addEventListener('focus', (event) => {
         event.target.style.backgroundColor = 'pink';
@@ -98,6 +97,9 @@ navBar.forEach(function(i) {
 });
 
 //Resize
+window.addEventListener('resize', function(){
+    console.log('Window has been resized');
+});
 
 //Scroll
 
