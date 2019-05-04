@@ -50,7 +50,9 @@ headerImg.onwheel = zoom;
 //Drag/Drop
 let dragged;
 let dragDest = document.querySelectorAll('.destination');
-console.log(dragDest);
+
+//console.log(dragDest);
+
 dragDest.forEach(function(i){
     i.setAttribute('draggable', true);
     i.addEventListener('drag', function(e) {
@@ -65,9 +67,13 @@ dragDest.forEach(function(i){
     i.addEventListener('dragend', function(e) {
         e.target.style.backgroundColor = '';
     }, false);
+    //drop
+    i.addEventListener('drop', function(e) {
+        e.preventDefault();
+        dragged.parentNode.removeChild(dragged);
+        e.target.appendChild(dragged);
+    }, false);
 });
-
-
 
 //Load
 
