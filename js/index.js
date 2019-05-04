@@ -2,7 +2,7 @@
 
 //NavBar prevent default
 const navBar = document.querySelectorAll('a');
-console.log(navBar);
+//console.log(navBar);
 
 navBar.forEach(function(i){
     i.addEventListener('click', function(e){
@@ -48,6 +48,26 @@ const headerImg = document.querySelector('header img');
 headerImg.onwheel = zoom;
 
 //Drag/Drop
+let dragged;
+let dragDest = document.querySelectorAll('.destination');
+console.log(dragDest);
+dragDest.forEach(function(i){
+    i.setAttribute('draggable', true);
+    i.addEventListener('drag', function(e) {
+
+    }, false);
+    //dragstart
+    i.addEventListener('dragstart', function(e) {
+        dragged = e.target;
+        e.target.style.backgroundColor = 'purple';
+    }, false);
+    //dragend
+    i.addEventListener('dragend', function(e) {
+        e.target.style.backgroundColor = '';
+    }, false);
+});
+
+
 
 //Load
 
