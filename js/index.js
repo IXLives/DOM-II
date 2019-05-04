@@ -33,12 +33,12 @@ function zoom(e) {
     e.preventDefault();
 
     if(e.deltaY < 0) {
-        scale *= event.deltaY * -2;
+        scale *= event.deltaY * -1.5;
     } else {
-        scale /= event.deltaY * 2;
+        scale /= event.deltaY * 1.5;
     }
 
-    scale = Math.min(Math.max(.125, scale), 4);
+    scale = Math.min(Math.max(.125, scale), 2);
 
     headerImg.style.transform = `scale(${scale})`;
 }
@@ -49,3 +49,16 @@ headerImg.onwheel = zoom;
 
 //Drag/Drop
 
+//Load
+
+//Focus
+
+//Resize
+
+//Scroll
+
+//Select
+
+//DblClick
+
+//Prevent Propagation
