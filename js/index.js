@@ -102,9 +102,16 @@ window.addEventListener('resize', function(){
 });
 
 //Scroll
+window.addEventListener('scroll', function() {
+    console.log('We are scrolling');
+});
 
 //Select
+// Need to add an element for this.
 
 //DblClick
+headerImg.addEventListener('dblclick', function(){
+    console.log(`I can't fix the size of the funbus!`);
+});
 
 //Prevent Propagation
