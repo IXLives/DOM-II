@@ -17,7 +17,7 @@ const navHeader = document.querySelector('.nav-container');
 
 navHeader.addEventListener('mouseover', function(e) {
     e.target.style.backgroundColor = 'red';
-    console.log(e);
+    //console.log(e);
 });
 
 
@@ -85,6 +85,17 @@ images.forEach(function(i) {
 });
 
 //Focus
+
+navBar.forEach(function(i) {
+    i.addEventListener('focus', (event) => {
+        event.target.style.backgroundColor = 'pink';
+        console.log(`${i} has focus`);
+    });
+
+    i.addEventListener('blur', (event) => {
+        event.target.style.background = '';    
+      });
+});
 
 //Resize
 
